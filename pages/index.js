@@ -13,13 +13,13 @@ const Home = () => (
     <Layout>
     <main>
       <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
+        Teste com <a href="https://nextjs.org">Next.js</a>
       </h1>
       <div className="card">
         <Link href="/about">
           <a>
-            <h3>About Us &rarr;</h3>
-            <p>Find more about us HERE!</p>
+            <h3>Sobre mim &rarr;</h3>
+            <p>Minha história com a programação</p>
           </a>
         </Link>
       </div>

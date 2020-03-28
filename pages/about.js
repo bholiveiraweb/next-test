@@ -13,14 +13,14 @@ const About = () => (
     <Layout>
       <main>
         <h1 className="title">
-          Here is <a href="https://nextjs.org">About!</a>
+          Mais da minha <a>História</a>
         </h1>
 
         <div className="card">
           <Link href="/">
             <a>
               <h3>&larr; Home</h3>
-              <p>Find more about us HERE!</p>
+              <p>Voltar para a página inicial</p>
             </a>
           </Link>
         </div>

@@ -1,10 +1,10 @@
 const Footer = () => (
     <>
         <footer>
-            <a href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            <a href="https://github.com/brunobgi"
                 target="_blank"
                 rel="noopener noreferrer" title="Zeit CO">
-                Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
+                Powered by &larr; Bruno Oliveira &rarr;
             </a>
         </footer>
         <style jsx>{`
