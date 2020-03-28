@@ -3,8 +3,8 @@ const Footer = () => (
         <footer>
             <a href="https://github.com/brunobgi"
                 target="_blank"
-                rel="noopener noreferrer" title="Zeit CO">
-                Powered by &larr; Bruno Oliveira &rarr;
+                rel="noopener noreferrer" title="Meu GitHub">
+                <i>Powered by &larr; Bruno Oliveira &rarr;</i>
             </a>
         </footer>
         <style jsx>{`
