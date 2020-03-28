@@ -3,27 +3,29 @@ import Link from 'next/link'
 
 import Layout from '../components/Layout';
 
-const Home = () => (
+const About = () => (
   <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>About Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
     <Layout>
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-      <div className="card">
-        <Link href="/about">
-          <a>
-            <h3>About Us &rarr;</h3>
-            <p>Find more about us HERE!</p>
-          </a>
-        </Link>
-      </div>
-    </main>
+      <main>
+        <h1 className="title">
+          Here is <a href="https://nextjs.org">About!</a>
+        </h1>
+
+        <div className="card">
+          <Link href="/">
+            <a>
+              <h3>&larr; Home</h3>
+              <p>Find more about us HERE!</p>
+            </a>
+          </Link>
+        </div>
+
+      </main>
     </Layout>
 
     <style jsx>{`
@@ -113,4 +115,4 @@ const Home = () => (
   </div>
 )
 
-export default Home
+export default About
