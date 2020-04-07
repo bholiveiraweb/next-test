@@ -29,8 +29,8 @@ function Home() {
       <Layout>
         <main>
           <picture className="profile-picture">
-            <source srcset="/images/me.webp" />
-            <img src="/images/me.jpg" alt="Bruno Oliveira - Profile" width="160" />
+            <source srcset="https://bholiveira.com.br/images/me.webp" />
+            <img src="https://bholiveira.com.br/images/me.jpg" alt="Bruno Oliveira - Profile" width="160" />
           </picture>
           <h1 className="title">
             <span>Olá,</span> seja bem vindo(a)!
