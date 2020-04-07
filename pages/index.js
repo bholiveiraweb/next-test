@@ -1,32 +1,54 @@
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import fetch from 'node-fetch'
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
 
-const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+function Home() {
+  const [gravatar, setGravatar] = useState([])
 
-    <Layout>
-    <main>
-      <h1 className="title">
-        Teste com <a href="https://nextjs.org">Next.js</a>
+  useEffect(() => {
+    fetch(`http://pt.gravatar.com/bholiveiraweb.json`)
+      .then((resp) => {
+        resp.json().then((data) => {
+          setGravatar(data.entry)
+        })
+      })
+  }, [])
+
+  return (
+    <div className="container">
+      <Head>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Layout>
+        <main>
+          {gravatar.map(data => (
+            <img className="gravatar" key={data.id} src={data.thumbnailUrl} width="160"/>
+          ))}
+          <h1 className="title">
+            <span>Olá,</span> seja bem vindo(a)!
       </h1>
-      <div className="card">
-        <Link href="/about">
-          <a>
-            <h3>Sobre mim &rarr;</h3>
-            <p>Minha história com a programação</p>
-          </a>
-        </Link>
-      </div>
-    </main>
-    </Layout>
+          <div className="card">
+            <Link href="/about">
+              <a>
+                <h3>Sobre mim &rarr;</h3>
+                <p>Minha história com a programação</p>
+              </a>
+            </Link>
+          </div>
+        </main>
+      </Layout>
 
-    <style jsx>{`
+      <style jsx>{`
+      .gravatar {
+        border-radius: 50%;
+        border: 8px solid #eaeae0;
+        margin-bottom: 40px
+      }
       .title a {
         color: #0070f3;
         text-decoration: none;
@@ -41,7 +63,14 @@ const Home = () => (
       .title {
         margin: 0;
         line-height: 1.15;
-        font-size: 4rem;
+        font-size: 3rem;
+        color: #0070f3
+      }
+
+      .title span {
+        display: block;
+        font-size: 6rem;
+        color: #000000;
       }
 
       .title,
@@ -110,7 +139,8 @@ const Home = () => (
         }
       }
 `}</style>
-  </div>
-)
+    </div>
+  )
+}
 
 export default Home

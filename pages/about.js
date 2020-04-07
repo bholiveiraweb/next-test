@@ -3,41 +3,36 @@ import Link from 'next/link'
 
 import Layout from '../components/Layout';
 
-const About = () => (
-  <div className="container">
-    <Head>
-      <title>About Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+function About() {
+  return (
+    <div className="container">
+      <Head>
+        <title>About Next App</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-    <Layout>
-      <main>
-        <h1 className="title">
-          Mais da minha <a>História</a>
-        </h1>
+      <Layout>
+        <main>
+          <h1 className="title">
+            Mais da minha <a>História</a>
+          </h1>
 
-        <div className="card">
-          <Link href="/">
-            <a>
-              <h3>&larr; Home</h3>
-              <p>Voltar para a página inicial</p>
-            </a>
-          </Link>
-        </div>
+          <div className="card">
+            <Link href="/">
+              <a>
+                <h3>&larr; Home</h3>
+                <p>Voltar para a página inicial</p>
+              </a>
+            </Link>
+          </div>
 
-      </main>
-    </Layout>
+        </main>
+      </Layout>
 
-    <style jsx>{`
+      <style jsx>{`
       .title a {
         color: #0070f3;
         text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
       }
 
       .title {
@@ -112,7 +107,8 @@ const About = () => (
         }
       }
 `}</style>
-  </div>
-)
+    </div>
+  )
+}
 
 export default About
