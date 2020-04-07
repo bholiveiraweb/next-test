@@ -7,7 +7,7 @@ function About() {
   return (
     <div className="container">
       <Head>
-        <title>About Next App</title>
+        <title>Bruno Oliveira - Sobre</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
