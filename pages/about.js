@@ -7,14 +7,14 @@ function About() {
   return (
     <div className="container">
       <Head>
-        <title>Bruno Oliveira - Sobre</title>
+        <title>Bruno Oliveira - Minha História</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
         <main>
           <h1 className="title">
-            Mais da minha <a>História</a>
+            Minha <a>história</a>
           </h1>
 
           <div className="card">
