@@ -6,6 +6,7 @@ import fetch from 'node-fetch'
 import Layout from '../components/Layout'
 
 function Home() {
+  /*
   const [gravatar, setGravatar] = useState([])
 
   useEffect(() => {
@@ -16,6 +17,7 @@ function Home() {
         })
       })
   }, [])
+  */
 
   return (
     <div className="container">
@@ -26,9 +28,10 @@ function Home() {
 
       <Layout>
         <main>
-          {gravatar.map(data => (
-            <img className="gravatar" key={data.id} src={data.thumbnailUrl} width="160"/>
-          ))}
+          <picture className="profile-picture">
+            <source srcset="/images/me.webp" />
+            <img src="/images/me.jpg" alt="Bruno Oliveira - Profile" width="160" />
+          </picture>
           <h1 className="title">
             <span>Olá,</span> seja bem vindo(a)!
       </h1>
@@ -44,11 +47,13 @@ function Home() {
       </Layout>
 
       <style jsx>{`
-      .gravatar {
+      .profile-picture img {
+        width: 160px;
         border-radius: 50%;
         border: 8px solid #eaeae0;
         margin-bottom: 40px
       }
+
       .title a {
         color: #0070f3;
         text-decoration: none;
